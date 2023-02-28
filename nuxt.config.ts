@@ -7,6 +7,9 @@ export default defineNuxtConfig({
     "primeicons/primeicons.css",
     "/node_modules/primeflex/primeflex.css", //Flexをインストールした場合
   ],
+  modules: [
+    '@pinia/nuxt',
+  ],
   build: {
     transpile: ["primevue"],
   },
