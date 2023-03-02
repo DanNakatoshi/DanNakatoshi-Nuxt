@@ -64,7 +64,7 @@
 
         <Column field="title">
           <template #body="slotProps">
-            <NuxtLink :to="`posts/${slotProps.data.slug}`">
+            <NuxtLink :to="slotProps.data.slug">
               <div
                 class="dt-title mt-2"
                 :class="
