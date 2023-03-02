@@ -1,48 +1,7 @@
 <template>
-  <div class="w-full ">
+  <div class="w-full">
     <UiCard>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, sunt itaque
-      reprehenderit rem cupiditate nam illo officiis perspiciatis iusto labore
-      molestias qui quibusdam dolores quis eligendi rerum, magnam vitae, vel
-      modi delectus quidem excepturi! Adipisci esse provident, molestias fugit
-      facere sunt aliquid voluptates inventore ab maxime sit sed cumque nostrum
-      iste, sequi exercitationem explicabo ipsum, vitae impedit. Error dolores
-      rerum libero, rem aut, velit sapiente dolorem esse ducimus, illo similique
-      consequuntur ipsam eaque veritatis? Ullam obcaecati sapiente earum
-      eligendi, dolore doloribus repellat consequuntur, natus, molestiae non
-      tempora labore vero dolor praesentium aperiam nisi quod sed quam. Repellat
-      debitis reprehenderit mollitia nihil odio dolorem reiciendis aliquam,
-      delectus rerum soluta amet at esse fugit, maiores molestiae incidunt
-      accusantium quod ducimus doloribus cum labore accusamus consequuntur
-      laboriosam libero. Culpa dicta, deleniti harum perspiciatis rem soluta
-      facere architecto beatae maiores, aperiam vel? Exercitationem dolor maxime
-      molestiae incidunt vel earum, culpa quae sequi inventore quo, ex quia
-      dolorem quos? Animi quis, incidunt non, cupiditate ab quasi numquam ut quo
-      ducimus at maxime. Facere ipsam dolorem consectetur reiciendis dolores
-      error veniam voluptate, placeat animi quisquam excepturi quos ipsum
-      adipisci? Fuga sunt explicabo debitis repellendus voluptates? Accusamus
-      quo distinctio aperiam quis dolores doloremque veritatis, itaque quaerat
-      neque odio provident eius dolore debitis dicta, corrupti quae quisquam
-      quibusdam totam molestias error, accusantium commodi iure facere. Quae
-      provident sunt eveniet, doloremque dolore repellendus ex, at eaque amet
-      similique ipsum atque reprehenderit omnis quisquam iusto molestiae?
-      Eveniet velit dolores et accusamus ipsum laborum maxime, hic facilis nam
-      provident aut dicta saepe atque veritatis quo autem animi nesciunt esse
-      dolor ex. Iste, eius neque temporibus fuga voluptatum officia laborum a
-      culpa quis praesentium aperiam laboriosam dolor debitis alias, obcaecati
-      facere earum? Ipsa perspiciatis aliquam ratione quis voluptates dolorum,
-      omnis, excepturi autem ipsum id deleniti, vel facere minus inventore odio
-      laborum dignissimos reprehenderit voluptatum officia quia dicta obcaecati?
-      Ad dicta nulla laudantium rerum odit soluta consequuntur optio! Rem vitae
-      ipsam animi! Cupiditate officiis, porro id error ducimus, esse commodi
-      quos fuga totam itaque aut soluta aliquid molestiae deleniti deserunt vel
-      numquam voluptatum eveniet ab autem dolores consequatur dolore voluptate
-      nemo! Quas, reprehenderit. In eos possimus et similique eligendi, cumque
-      vero fuga dolorum adipisci, nemo labore ratione vel, quos praesentium
-      voluptas tenetur non dolore impedit sunt nesciunt. Eos a sit perferendis
-      nemo fugit, exercitationem praesentium atque aliquam tempore nostrum,
-      quasi quaerat? Harum ut optio voluptatum quibusdam modi odit aspernatur
-      veniam cupiditate soluta velit.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi unde esse repellat ipsam dolores dicta eaque officia ad ducimus quam explicabo repellendus aspernatur magnam quod placeat facilis excepturi aut nam, corrupti vitae quisquam iusto. Minus, hic officiis. Recusandae inventore nulla, soluta fuga accusantium minus expedita asperiores consectetur neque praesentium eaque dolor ipsa atque veritatis molestiae, totam nemo, ex adipisci nobis. Harum inventore, sapiente sequi dolore error fugit numquam, vitae earum, architecto in asperiores vel illum totam! Voluptate laboriosam autem sed animi corporis explicabo quos in repellat, et vitae esse est doloribus, illum nam odit ipsa, quam expedita ipsam vero exercitationem! Optio odio ullam exercitationem quo voluptas. In explicabo similique omnis dolorum fuga odio minus recusandae voluptas atque, laudantium, cum molestias dicta ex quis dignissimos rerum, dolor consequatur qui impedit nihil nulla quibusdam quidem vitae tenetur? Nisi, corporis! Est explicabo autem ullam possimus cupiditate inventore quasi laboriosam laudantium quidem qui aut voluptates, et tempore, voluptatibus, soluta totam quisquam repellat suscipit expedita illum. Modi numquam esse magni. Eaque incidunt itaque maiores necessitatibus nihil mollitia omnis repellendus reprehenderit repudiandae aspernatur, non facilis nulla expedita delectus voluptatem quaerat, cum cupiditate sed temporibus fugit modi quia maxime similique? Expedita, at fuga sequi voluptatem ab voluptates inventore nisi laudantium id itaque a recusandae praesentium numquam animi, dolorum blanditiis rerum, delectus dolor. Nulla molestiae dolorum sed odio? Corporis porro expedita illo. Ea, in. Blanditiis, veniam corporis. Necessitatibus veritatis ut culpa quam dignissimos, similique laborum alias expedita perspiciatis voluptates obcaecati repellendus? Assumenda esse molestiae, optio, incidunt quis nam nihil est tempore, quas aperiam possimus. Unde quia aperiam totam recusandae modi fuga, distinctio ullam et hic, perferendis eos quos placeat incidunt! Nostrum illo officiis corrupti suscipit vitae nam sapiente, error sit facilis cum explicabo repudiandae voluptates aspernatur inventore voluptatibus odit. Sed, quasi ab aperiam voluptatibus expedita iusto eius atque?
     </UiCard>
   </div>
 </template>

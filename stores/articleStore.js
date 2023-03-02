@@ -1,11 +1,12 @@
 import { defineStore } from "pinia";
 import { ref } from "vue";
 
-// import { getBlogList } from "~/plugins/EventService.js";
 
 export const useArticleStore = defineStore("article", () => {
-  
-  const articleData = ref([
+  const articleData = ref();
+
+
+  const articleData1 = ref([
     {
       id: "1000",
       title: "JavaScriptでスクレイピングをしよう",

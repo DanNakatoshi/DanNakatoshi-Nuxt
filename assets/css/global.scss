@@ -1,26 +1,22 @@
 @font-face {
-  font-family: 'Noto Sans Japanese';
+  font-family: "Noto Sans Japanese";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('/assets/fonts/NotoSansJP-Regular.otf') format('truetype');
+  src: url("/assets/fonts/NotoSansJP-Regular.otf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Noto Sans Japanese';
+  font-family: "Noto Sans Japanese";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url('/assets/fonts/NotoSansJP-Bold.otf') format('truetype');
+  src: url("/assets/fonts/NotoSansJP-Bold.otf") format("truetype");
 }
 
-
 html {
-  background: url("/img/tokyo.png") no-repeat center center fixed;
-  background-size: cover;
-  font-family: 'Noto Sans Japanese', Fallback, Roboto;
+  font-family: "Noto Sans Japanese", Fallback, Roboto;
   font-weight: 400;
-
   color: aliceblue;
 }
 
@@ -74,39 +70,46 @@ html {
 /* END Corner-Border Icon */
 
 
-/* Article*/
-.article-title {
-  font-family: "Noto Sans Japanese";
-  font-weight: 700;
+/* SIDE BAR*/
+.p-sidebar .p-sidebar-header {
+  background-color: #79D7CE;
+
 }
-
-
-.neon-text {
-  color: #fff;
-  text-shadow:
-    0 0 7px #fff,
-    0 0 21px #fff,
-    0 0 82px #0fa,
-    0 0 102px #0fa,
+.p-sidebar-content {
+  background-color: #79D7CE;
 }
-
-
-
 /* Mobile */
 
 @media screen and (max-width: 576px) {
   .hide-mobile {
     display: none;
   }
-
+  html {
+    background-color: #120e24;
+  }
 }
 
-/* Desktop */
+/* Desktop~ */
 @media screen and (min-width: 577px) {
+  html {
+    background: url("/img/tokyo.png") no-repeat center center fixed;
+    background-size: cover;
+  }
   .hide-desktop {
     display: none;
   }
   #app-logo {
     max-width: 430px;
+  }
+}
+
+/* Desktop ONLY*/
+@media screen and (min-width: 992px) {
+  #side-col {
+    transform: perspective(1200px) rotateY(5deg);
+  }
+
+  #main-col {
+    margin-top: 10px;
   }
 }

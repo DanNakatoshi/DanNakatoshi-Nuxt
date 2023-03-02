@@ -1,21 +1,25 @@
 <template>
-  <div class="w-full p-2 flex justify-content-between flex-wrap align-items-center">
-    <img id="app-logo" class="p-2" src="/img/logo.svg" alt="Dan Nakatoshi" />
+  <div class="relative w-full">
+    <div
+      class="w-full p-2 flex justify-content-center flex-wrap align-items-center"
+    >
+      <img id="app-logo" class="p-2" src="/img/logo.svg" alt="Dan Nakatoshi" />
 
-    <div class="pr-2 hide-mobile">
-      <div class="flex">
-        <BaseHeaderNav />
+      <div class="pr-2 hide-mobile">
+        <div class="flex">
+          <BaseHeaderNav />
+        </div>
       </div>
     </div>
-  </div>
 
-  <div id="icon-bars" class="hide-desktop p-2">
-    <Button
-      icon="pi pi-bars"
-      class="p-button-rounded p-button-secondary "
-      @click="openMobileNav"
-      v-show="!isMobileNavOpen"
-    />
+    <div id="icon-bars" class="hide-desktop p-2">
+      <Button
+        icon="pi pi-bars"
+        class="p-button-rounded p-button-secondary"
+        @click="openMobileNav"
+        v-show="!isMobileNavOpen"
+      />
+    </div>
   </div>
 
   <Sidebar v-model:visible="isMobileNavOpen">
@@ -32,3 +36,11 @@ function openMobileNav() {
   isMobileNavOpen.value = !isMobileNavOpen.value;
 }
 </script>
+
+<style>
+#icon-bars {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+</style>
