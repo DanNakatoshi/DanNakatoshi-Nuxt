@@ -14,11 +14,21 @@
   src: url("/assets/fonts/NotoSansJP-Bold.otf") format("truetype");
 }
 
+@font-face {
+  font-family: "DotGothic16";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/DotGothic16-Regular.ttf") format("truetype");
+}
+
+
 html {
   font-family: "Noto Sans Japanese", Fallback, Roboto;
   font-weight: 400;
   color: aliceblue;
 }
+
 
 #app-container {
   max-width: 1600px;
@@ -30,44 +40,7 @@ html {
   max-width: 320px;
 }
 
-/* UI CARD */
-.glass-effect {
-  background: rgba(121, 215, 206, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-}
 
-/* Corner-Border Icon */
-
-.corner {
-  position: absolute;
-  z-index: 10;
-}
-
-.corner--left-top {
-  left: 0px;
-  top: 0px;
-}
-
-.corner--right-top {
-  right: 0px;
-  top: 0px;
-  transform: rotate(90deg);
-}
-
-.corner--left-bottom {
-  left: 0px;
-  bottom: 0px;
-  transform: rotate(-90deg);
-}
-
-.corner--right-bottom {
-  right: 0px;
-  bottom: 0px;
-  transform: rotate(180deg);
-}
-
-/* END Corner-Border Icon */
 
 
 /* SIDE BAR*/
@@ -79,6 +52,8 @@ html {
   background-color: #79D7CE;
 }
 /* Mobile */
+
+
 
 @media screen and (max-width: 576px) {
   .hide-mobile {
@@ -105,11 +80,11 @@ html {
 
 /* Desktop ONLY*/
 @media screen and (min-width: 992px) {
+  /*
   #side-col {
     transform: perspective(1200px) rotateY(5deg);
   }
+    */
 
-  #main-col {
-    margin-top: 10px;
-  }
+
 }

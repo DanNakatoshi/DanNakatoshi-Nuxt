@@ -1,7 +1,7 @@
 <template>
   <div class="w-full">
     <UiCard v-if="props.article">
-      <div id="article-title" class="p-2">
+      <div class="p-2">
         <h1
           class="article-title neon-text xl:text-5xl lg:text-4xl md:text-3xl sm:text-3xl text-2xl m-2"
         >
@@ -78,6 +78,8 @@ const props = defineProps(["article"]);
 .article-title {
   font-family: "Noto Sans Japanese";
   font-weight: 700;
+  line-height: 120%;
+
 }
 
 .neon-text {
@@ -118,6 +120,8 @@ const props = defineProps(["article"]);
   font-size: 1.5rem;
   font-family: "Noto Sans Japanese";
   font-weight: 700;
+  line-height: 120%;
+
 }
 
 .link-btn {

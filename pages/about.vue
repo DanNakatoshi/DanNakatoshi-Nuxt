@@ -1,29 +1,4 @@
 <template>
-  <div id="app-container">
-    <NuxtLayout name="main">
-      <template #header>
-        <BaseHeader />
-      </template>
-
-      <template #table>
-        <BaseTable
-        />
-      </template>
-      <template #social>
-        <BaseSocial />
-      </template>
-
-      <template #article>
-        <BaseAbout />
-      </template>
-
-      <template #sidebar>
-        <!-- <BaseSidebar /> -->
-      </template>
-
-      <template #footer>
-        <BaseFooter />
-      </template>
-    </NuxtLayout>
-  </div>
+  <h2>About Me</h2>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aut maiores dolor quas minus, fuga perferendis obcaecati at placeat, delectus sequi harum, ducimus repellendus alias optio dolores mollitia error ea eos commodi quis! Delectus architecto cum tenetur ea numquam possimus quis consectetur accusamus vitae repudiandae veniam at aperiam maxime reprehenderit sed hic magnam exercitationem necessitatibus eveniet minima eius sint, ipsam fugiat? Perspiciatis fugiat, deserunt magni numquam qui deleniti, dolore molestiae modi adipisci asperiores repellendus molestias suscipit reprehenderit dolor delectus earum accusantium ullam consectetur, at nemo. Beatae, nam amet quisquam dolorem asperiores quibusdam doloremque? Hic explicabo quidem labore officia quasi quo voluptatem tempora deserunt. Veritatis provident quod illo, voluptate laborum voluptatum hic odio voluptas laudantium error, possimus numquam aliquid accusantium nostrum fuga id accusamus voluptatem. Quo magni voluptates aspernatur id quia ad nam. Sunt cumque provident cum deleniti quae nulla nisi ab fuga odio quis, quia tenetur aliquid veritatis in itaque iure, sint exercitationem. Itaque dolores expedita possimus beatae alias ullam a mollitia amet officia, ipsam nobis ex? Natus modi sunt iure possimus eveniet, veritatis ipsum nulla quisquam maiores, animi vitae reprehenderit odit, incidunt cumque quia ipsa voluptatem ullam fugiat iusto esse rerum ad similique! Adipisci accusantium tenetur corporis cumque veritatis distinctio laborum saepe itaque necessitatibus dicta quidem libero quas nobis, officia hic expedita soluta culpa aut labore porro sit accusamus. Deleniti, optio sed voluptas soluta odit facere culpa cum? Doloremque iusto, expedita laboriosam mollitia dolore modi tempora perspiciatis, eos cumque magnam laudantium commodi deserunt! Repudiandae debitis atque ratione incidunt pariatur necessitatibus deserunt minus? Ad itaque cum, vel maiores culpa nihil impedit similique modi praesentium! Necessitatibus veritatis aut possimus rerum reiciendis unde dolores architecto explicabo maiores laboriosam earum facilis accusamus quasi tempore ab qui culpa cum voluptatem, dolor magni voluptatibus esse suscipit repellat praesentium. Maxime voluptatum, blanditiis magni explicabo pariatur recusandae.</p>
 </template>

@@ -1,6 +1,6 @@
 <template>
   <UiCard>
-    <div>
+    <div >
       <DataTable
         :value="props.articleList"
         :paginator="true"
@@ -263,10 +263,10 @@ function applyLangFilter(e) {
 
     transform: scale(1.03);
   }
-
   .dt-title__index {
     font-size: 13px;
     padding-bottom: 7px;
+    font-family: 'DotGothic16', Fallback, Roboto;
   }
   .dt-title__text {
     font-family: "Noto Sans Japanese", Fallback, Roboto;
@@ -276,6 +276,7 @@ function applyLangFilter(e) {
 
   .difficulty-wrapper {
     .difficulty-wrapper__text {
+      font-family: 'DotGothic16', Fallback, Roboto;
       position: absolute;
       right: 0;
       bottom: 0px;

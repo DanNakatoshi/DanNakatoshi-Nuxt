@@ -19,19 +19,18 @@
         </div>
       </div>
       <div class="col-12 lg:col-8 flex" id="main-col">
-        <BaseArticle :article="article" />
-
-        <!-- <slot></slot> -->
+        <slot></slot>
       </div>
       <div class="col-12 flex"><BaseFooter /></div>
     </div>
-  </div>
+  </div>f
 </template>
 
 <script setup>
-import { watch } from "vue";
+import { watch, provide } from "vue";
 
-// const route = useRoute()
+const route = useRoute()
+
 
 const BACKEND_URL = "http://127.0.0.1:8000/api/blog/";
 const { data: articleList } = await useFetch(BACKEND_URL);
@@ -53,4 +52,10 @@ function updateArticle(id) {
 watch(currentArticleId, async (newId) => {
   currentArticleId.value = newId;
 });
+
+provide('article',article )
+
+
+
+
 </script>

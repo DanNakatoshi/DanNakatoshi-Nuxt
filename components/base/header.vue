@@ -3,7 +3,14 @@
     <div
       class="w-full p-2 flex justify-content-center flex-wrap align-items-center"
     >
-      <img id="app-logo" class="p-2" src="/img/logo.svg" alt="Dan Nakatoshi" />
+      <NuxtLink to="/">
+        <img
+          id="app-logo"
+          class="p-2"
+          src="/img/logo.svg"
+          alt="Dan Nakatoshi"
+        />
+      </NuxtLink>
 
       <div class="pr-2 hide-mobile">
         <div class="flex">
