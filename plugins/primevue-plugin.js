@@ -7,6 +7,8 @@ import Sidebar from 'primevue/sidebar';
 import Badge from 'primevue/badge';
 import Dropdown from 'primevue/dropdown';
 import MultiSelect from 'primevue/multiselect';
+import Timeline from 'primevue/timeline';
+
 
 
 
@@ -20,4 +22,6 @@ export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.component('Badge', Badge);
   nuxtApp.vueApp.component('Dropdown', Dropdown);
   nuxtApp.vueApp.component('MultiSelect', MultiSelect);
+  nuxtApp.vueApp.component('Timeline', Timeline);
+
 });

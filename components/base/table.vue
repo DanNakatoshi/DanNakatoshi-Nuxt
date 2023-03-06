@@ -1,6 +1,6 @@
 <template>
   <UiCard>
-    <div >
+    <div>
       <DataTable
         :value="props.articleList"
         :paginator="true"
@@ -55,7 +55,7 @@
                 type="button"
                 icon="pi pi-filter-slash"
                 label="Clear"
-                class="p-button-outlined m-2"
+                class="m-2"
                 @click="clearFilter()"
               />
             </div>
@@ -66,13 +66,8 @@
           <template #body="slotProps">
             <NuxtLink :to="slotProps.data.slug">
               <div
-                class="dt-title mt-2"
-                :class="
-                  slotProps.data.id == props.currentArticleId
-                    ? 'active-table'
-                    : 'non-active-table'
-                "
-                @click="$emit('articleClicked', slotProps.data.id)"
+                class="dt-title mt-2 non-active-table"
+                @click="$emit('articleClicked', slotProps.data.id, slotProps.data.slug)"
               >
                 <div class="dt-title__index">
                   {{
@@ -104,22 +99,22 @@
                   <span
                     class="difficulty-wrapper__text anyone-banner"
                     v-if="slotProps.data.difficulty == 'Anyone'"
-                    >全般向け</span
+                    >{{ slotProps.data.difficulty }}</span
                   >
                   <span
                     class="difficulty-wrapper__text beginner-banner"
                     v-if="slotProps.data.difficulty == 'Beginner'"
-                    >初心者向け</span
+                    >{{ slotProps.data.difficulty }}</span
                   >
                   <span
                     class="difficulty-wrapper__text intermediate-banner"
                     v-if="slotProps.data.difficulty == 'Intermediate'"
-                    >中級者向け</span
+                    >{{ slotProps.data.difficulty }}</span
                   >
                   <span
                     class="difficulty-wrapper__text advanced-banner"
                     v-if="slotProps.data.difficulty == 'Advanced'"
-                    >上級者向け</span
+                    >{{ slotProps.data.difficulty }}</span
                   >
                 </div>
               </div>
@@ -185,47 +180,43 @@ function applyLangFilter(e) {
   filters.value.is_english.value = e.value.code;
 }
 
+// function activateTable(id) {
+//   console.log(id);
+// }
 // ROUTE
-
-
 </script>
 
 <style lang="scss">
+@import "/assets/css/global.scss";
+
 .p-datatable .p-datatable-thead > tr > th {
   border: 0;
-  background: transparent;
+  // background: transparent;
 }
 .p-datatable .p-datatable-tbody > tr {
-  color: white;
+  color: $White;
   background: transparent;
   margin: 5px 0 5px 0;
   &:hover {
-    background-color: rgba(197, 228, 120, 0.48);
+    background-color: $Cyan;
   }
 }
 .p-datatable .p-datatable-tbody > tr > td {
   border: 0;
   padding: 10px;
-  margin: 10px;
+  // margin: 10px;
 }
 .p-paginator {
   background: transparent;
   border: 0;
 }
-.active-table {
-  background-color: #442774;
-}
+// .active-table {
+//   background-color: $Foreground;
+//   color: $Background;
+// }
 
 .non-active-table {
-  background-color: #011627;
-  /* 
-  
-    background: linear-gradient(
-    112.1deg,
-    rgb(32, 38, 57) 11.4%,
-    rgb(63, 76, 119) 70.2%
-  );
-  */
+  background-color: $Background;
 }
 
 .dt-title {
@@ -242,6 +233,7 @@ function applyLangFilter(e) {
     0% 85%
   );
 
+  /*
   mask-image: linear-gradient(
     45deg,
     #000 25%,
@@ -251,6 +243,7 @@ function applyLangFilter(e) {
 
   mask-size: 800%;
   mask-position: 0;
+  */
 
   padding: 10px 10px 10px 10px;
   margin: 3px;
@@ -260,13 +253,14 @@ function applyLangFilter(e) {
     transition: mask-position 1.5s ease;
     mask-position: 120%;
     opacity: 1;
-
-    transform: scale(1.03);
+    background-color: $Selection;
+    color: $White;
+    // transform: scale(1.03);
   }
   .dt-title__index {
     font-size: 13px;
     padding-bottom: 7px;
-    font-family: 'DotGothic16', Fallback, Roboto;
+    font-family: "DotGothic16", Fallback, Roboto;
   }
   .dt-title__text {
     font-family: "Noto Sans Japanese", Fallback, Roboto;
@@ -276,7 +270,8 @@ function applyLangFilter(e) {
 
   .difficulty-wrapper {
     .difficulty-wrapper__text {
-      font-family: 'DotGothic16', Fallback, Roboto;
+      font-family: "DotGothic16", Fallback, Roboto;
+      color: $CurrentLine;
       position: absolute;
       right: 0;
       bottom: 0px;
@@ -284,19 +279,24 @@ function applyLangFilter(e) {
       clip-path: polygon(0 31%, 10% 1%, 100% 0, 100% 100%, 0 100%);
     }
     .anyone-banner {
-      background-color: #025e16;
+      background-color: $Green;
     }
     .beginner-banner {
-      background-color: #210c99;
+      background-color: $Magenta;
     }
     .intermediate-banner {
-      background-color: #69190f;
+      background-color: $Yellow;
     }
     .advanced-banner {
-      background-color: #040500;
+      background-color: $Red;
     }
   }
 }
+
+#side-col > div > div > div > div > div > div > div.p-datatable-wrapper > table > tbody > tr > td > a {
+  text-decoration: none;
+}
+
 .p-datatable .p-datatable-header {
   background-color: transparent;
   border-width: 0;
@@ -307,16 +307,22 @@ function applyLangFilter(e) {
   padding: 0px;
 }
 .p-inputtext {
-  background-color: white;
+  background-color: $White;
   opacity: 1;
 }
 
 /* Pagenation */
 .p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
-  background: #c5e478;
-  border-color: #caf758;
+  background: $Orange;
+  border-color: $Orange;
   border-width: 2px;
-  color: rgb(15, 15, 15);
+  color: $Background;
   box-shadow: 0px 0px 30px 3px rgba(197, 228, 120, 0.4);
 }
+
+// .p-paginator-page{
+//   &:hover {
+//     background-color: $Blue;
+//   }
+// }
 </style>

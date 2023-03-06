@@ -1,6 +1,7 @@
 <template>
   <div class="w-full">
     <UiCard v-if="props.article">
+      <!-- TITLE -->
       <div class="p-2">
         <h1
           class="article-title neon-text xl:text-5xl lg:text-4xl md:text-3xl sm:text-3xl text-2xl m-2"
@@ -9,77 +10,98 @@
         </h1>
       </div>
 
-      <div class="article-content p-2">
-        <div class="flex felx-wrap">
-          <Badge
-            v-if="props.article.date"
-            :value="props.article.date"
-            class="m-2"
-          ></Badge>
-          <Badge
-            v-if="props.article.difficulty"
-            :value="props.article.difficulty"
-            class="m-2"
-          ></Badge>
-          <Button
-            v-if="props.article.github_url"
-            class="discord p-0"
-            aria-label="GitHub"
-          >
-            <a
-              :href="props.article.github_url"
-              target="_blank"
-              class="link-btn"
-            >
-              <i class="pi pi-github px-2"></i>
-              <span class="px-3">GitHub</span>
-            </a>
-          </Button>
-        </div>
-
-        <div
-          v-if="props.article.meta_description"
-          id="article-description-wrapper"
+      <!-- BADGE -->
+      <div class="flex felx-wrap px-2">
+        <Badge
+          v-if="props.article.date"
+          :value="props.article.date"
           class="m-2"
-        >
-          <h2 class="pb-3 text-stroke h2-title">概要</h2>
+        ></Badge>
+
+        <Badge
+          v-if="props.article.difficulty"
+          :value="props.article.difficulty"
+          class="m-2"
+        ></Badge>
+      </div>
+
+      <!-- CONTENT -->
+      <div class="article-content p-2">
+        <div v-if="props.article.meta_description" class="meta-wrapper m-2">
+          <h2 class="title-summary pb-3 text-stroke h2-title"># Introduction</h2>
           <span
             v-html="props.article.meta_description"
             class="meta-text"
           ></span>
         </div>
 
-        <div
-          v-if="props.article.dependency"
-          id="article-dependency-wrapper"
-          class="m-2"
-        >
-          <h2 class="pb-3 text-stroke h2-title">環境</h2>
+        <div v-if="props.article.dependency" class="m-2 meta-wrapper">
+          <h2 class="title-dependency pb-3 text-stroke h2-title"># Prerequisites</h2>
           <span v-html="props.article.dependency"></span>
         </div>
         <div class="m-2">
           <span v-html="props.article.content"></span>
         </div>
+      </div>
 
-        <div v-if="props.article.reference_url">
-          <Button>{{ props.article.reference_url }}</Button>
-        </div>
+      <!-- FOOTER -->
+      <div class="flex felx-wrapper p-2">
+        <span class="m-2">
+          <Button v-if="props.article.github_url" aria-label="GitHub">
+            <a
+              :href="props.article.github_url"
+              target="_blank"
+              class="link-btn"
+            >
+              <i class="pi pi-github"></i>
+              <span class="px-1">GitHub</span>
+            </a>
+          </Button>
+        </span>
+
+        <span class="m-2">
+          <Button v-if="props.article.reference_url">
+            <a
+              :href="props.article.reference_url"
+              target="_blank"
+              class="link-btn"
+            >
+              <span class=""
+                >参考:{{ props.article.reference_url }}</span
+              >
+            </a>
+          </Button>
+        </span>
       </div>
     </UiCard>
   </div>
 </template>
 
 <script setup>
+// import hljs from 'highlight.js';
+import hljs from "highlight.js/lib/core";
+import javascript from "highlight.js/lib/languages/javascript";
+import python from "highlight.js/lib/languages/python";
+
 const props = defineProps(["article"]);
+
+onNuxtReady(async () => {
+  hljs.registerLanguage("python", python);
+  hljs.registerLanguage("javascript", javascript);
+  hljs.highlightAll();
+});
+
+// Highlight.js
 </script>
 
 <style lang="scss">
+@import "/assets/css/global.scss";
+
 /* Article*/
 .article-title {
   font-family: "Noto Sans Japanese";
   font-weight: 700;
   line-height: 120%;
-
 }
 
 .neon-text {
@@ -88,31 +110,45 @@ const props = defineProps(["article"]);
 }
 
 /* article-description */
-#article-description-wrapper {
-  background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
-  padding: 1.5rem;
-  border-radius: 3px;
-}
 
-#article-dependency-wrapper {
-  background-image: linear-gradient(
-    to right top,
-    #d16ba5,
-    #c777b9,
-    #ba83ca,
-    #aa8fd8,
-    #9a9ae1,
-    #8aa7ec,
-    #79b3f4,
-    #69bff8,
-    #52cffe,
-    #41dfff,
-    #46eefa,
-    #5ffbf1
-  );
+.article-content {
+  u {
+    text-decoration-style: solid;
+    text-decoration-thickness: 0.15rem;
+  }
 
-  padding: 1.5rem;
-  border-radius: 3px;
+  strong {
+    font-weight: bold;
+  }
+  em {
+    font-style: italic;
+  }
+  a {
+    color: $Red;
+    background-color: $Background;
+    color: $Yellow;
+    padding: 1px 5px;
+    border-radius: 2px;
+    &:hover {
+      background-color: $Selection;
+    }
+  }
+
+  .meta-wrapper {
+    background-color: $Background;
+    border-style: solid;
+    border-color: $LineNumber;
+    border-width: 2px;
+    color: $White;
+    padding: 1.5rem;
+    border-radius: 5px;
+    .title-summary {
+      color: $Red;
+    }
+    .title-dependency {
+      color: $Blue;
+    }
+  }
 }
 
 .h2-title {
@@ -121,10 +157,9 @@ const props = defineProps(["article"]);
   font-family: "Noto Sans Japanese";
   font-weight: 700;
   line-height: 120%;
-
 }
 
 .link-btn {
-  list-style: none;
+  text-decoration: none;
 }
 </style>

@@ -29,7 +29,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1.5;
+	line-height: 1.8;
 }
 ol, ul {
 	list-style: none;
@@ -50,5 +50,4 @@ table {
 a:-webkit-any-link {
 	color: inherit;
 	cursor: pointer;
-	text-decoration: none;
 }

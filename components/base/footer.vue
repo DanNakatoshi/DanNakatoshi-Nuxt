@@ -1,5 +1,7 @@
 <template>
-  <div class="w-full ">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab reprehenderit doloremque deserunt harum omnis quas, temporibus tempore amet esse corrupti nisi earum exercitationem labore voluptatum repellendus laudantium ipsum sint a explicabo rem praesentium assumenda illum quibusdam ratione. Dolore deserunt, doloribus dolorem consequuntur nihil ullam provident? Magni, at. Ab omnis ut deserunt voluptatibus perspiciatis maiores minus nam numquam. Quas nihil dignissimos reprehenderit magnam alias nobis odit mollitia eligendi necessitatibus eum sint ex illo cupiditate, laudantium rerum enim non corrupti incidunt praesentium maiores accusantium asperiores sequi porro? Eligendi accusamus debitis, eos, dolore dolorum earum aliquam voluptates, hic porro tempora exercitationem accusantium neque. Rem ea minus facilis esse obcaecati autem adipisci itaque placeat repellat iste, vero sed quam suscipit vitae aperiam possimus magnam, sunt similique? Voluptatem exercitationem ad impedit quaerat. Consectetur ab quas accusamus voluptatibus, doloremque placeat, quidem quo accusantium tenetur culpa cumque reiciendis itaque, consequatur error odit dicta illum? Nulla quisquam pariatur dolorum neque accusantium vel repellat, voluptates sint labore architecto quae maiores nisi amet ducimus dignissimos! Mollitia id voluptate laudantium, delectus eveniet ipsa. Accusantium in quos expedita quia tempore aliquid illo quo. Distinctio necessitatibus illum non consectetur saepe voluptas reprehenderit, eveniet quo magni recusandae id ratione inventore mollitia dolores aut consequuntur?
+  <div class="w-full">
+    <div class="flex justify-content-center">
+      <small>&copy; Copyright 2023, AsameshiCode</small>
+    </div>
   </div>
 </template>

@@ -1,4 +1,73 @@
 <template>
-  <h2>About Me</h2>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aut maiores dolor quas minus, fuga perferendis obcaecati at placeat, delectus sequi harum, ducimus repellendus alias optio dolores mollitia error ea eos commodi quis! Delectus architecto cum tenetur ea numquam possimus quis consectetur accusamus vitae repudiandae veniam at aperiam maxime reprehenderit sed hic magnam exercitationem necessitatibus eveniet minima eius sint, ipsam fugiat? Perspiciatis fugiat, deserunt magni numquam qui deleniti, dolore molestiae modi adipisci asperiores repellendus molestias suscipit reprehenderit dolor delectus earum accusantium ullam consectetur, at nemo. Beatae, nam amet quisquam dolorem asperiores quibusdam doloremque? Hic explicabo quidem labore officia quasi quo voluptatem tempora deserunt. Veritatis provident quod illo, voluptate laborum voluptatum hic odio voluptas laudantium error, possimus numquam aliquid accusantium nostrum fuga id accusamus voluptatem. Quo magni voluptates aspernatur id quia ad nam. Sunt cumque provident cum deleniti quae nulla nisi ab fuga odio quis, quia tenetur aliquid veritatis in itaque iure, sint exercitationem. Itaque dolores expedita possimus beatae alias ullam a mollitia amet officia, ipsam nobis ex? Natus modi sunt iure possimus eveniet, veritatis ipsum nulla quisquam maiores, animi vitae reprehenderit odit, incidunt cumque quia ipsa voluptatem ullam fugiat iusto esse rerum ad similique! Adipisci accusantium tenetur corporis cumque veritatis distinctio laborum saepe itaque necessitatibus dicta quidem libero quas nobis, officia hic expedita soluta culpa aut labore porro sit accusamus. Deleniti, optio sed voluptas soluta odit facere culpa cum? Doloremque iusto, expedita laboriosam mollitia dolore modi tempora perspiciatis, eos cumque magnam laudantium commodi deserunt! Repudiandae debitis atque ratione incidunt pariatur necessitatibus deserunt minus? Ad itaque cum, vel maiores culpa nihil impedit similique modi praesentium! Necessitatibus veritatis aut possimus rerum reiciendis unde dolores architecto explicabo maiores laboriosam earum facilis accusamus quasi tempore ab qui culpa cum voluptatem, dolor magni voluptatibus esse suscipit repellat praesentium. Maxime voluptatum, blanditiis magni explicabo pariatur recusandae.</p>
+  <div class="w-full">
+    <UiCard>
+      <div class="p-3">
+        <div>
+          <p>
+            Hi coders! I am Dan Nakatoshi. <br/>I came to the U.S. in 2015. since
+            then, I've tried to find my carrier by trying many jobs in Japan and
+            America. I would like to share my experience of how I started the coding
+            journey in the timeline below. <br/>I also wanted to prove that if you don't
+            give up, you can learn a new language like how I learned English,
+            and you can write codes like how I write codes today!
+          </p>
+        </div>
+        <div class="m-2 p-2 pb-4 timeline-container">
+          <h5>Timeline</h5>
+          <Timeline :value="events">
+            <template #opposite="slotProps">
+              <small class="">{{ slotProps.item.date }}</small>
+            </template>
+            <template #content="slotProps">
+              {{ slotProps.item.event }}
+            </template>
+          </Timeline>
+        </div>
+
+
+      </div>
+    </UiCard>
+  </div>
 </template>
+
+<script setup>
+const events = ref([
+  {
+    event: "Started learning Python",
+    date: "March 2020",
+  },
+  {
+    event: "Started learning Django(Python)",
+    date: "August 2020",
+  },
+  {
+    event: "Started learning JavaScript",
+    date: "January 2021",
+  },
+  {
+    event: "Started learning Linux(Ubuntu) Server",
+    date: "June 2021",
+  },
+  {
+    event: "Deployed Django app from Ubuntu Server",
+    date: "March 2022",
+  },
+  {
+    event: "Started Learning Vue(JapaScript)",
+    date: "May 2022",
+  },
+  {
+    event: "Deployed WordPress Coding Blog in Japanese",
+    date: "June 2022",
+  },
+
+]);
+</script>
+
+<style lang="scss">
+@import "/assets/css/global.scss";
+
+.timeline-container {
+  background-color: $Background;
+}
+</style>

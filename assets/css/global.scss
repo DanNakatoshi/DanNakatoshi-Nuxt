@@ -1,3 +1,22 @@
+ $Background: #011627;
+ $Foreground: #d6deeb;
+ $CurrentLine: #01111d;
+ $Selection: #1d3b53;
+ $Cursor: #80a4c2;
+ $LineNumber: #4b6479;
+ $CurrentLineNumber: #c5e4fd;
+ $TagsKeywords: #7fdbca;
+ $Comment: #637777;
+ $Red: #ef5350;
+ $Green: #22da6e;
+ $Yellow: #addb67;
+ $Blue: #82aaff;
+ $Orange: #f78c6c;
+ $Magenta: #c792ea;
+ $Cyan: #21c7a8;
+ $White: #ffffff;
+ $BrightBlack: #575656;
+
 @font-face {
   font-family: "Noto Sans Japanese";
   font-style: normal;
@@ -26,7 +45,7 @@
 html {
   font-family: "Noto Sans Japanese", Fallback, Roboto;
   font-weight: 400;
-  color: aliceblue;
+  color: $White;
 }
 
 
@@ -38,6 +57,22 @@ html {
 
 #app-logo {
   max-width: 320px;
+  &:hover {
+    filter: invert(59%) sepia(100%) saturate(326%) hue-rotate(119deg) brightness(90%) contrast(95%);
+  };
+}
+
+/* Global Btn*/
+.p-button{
+  background-color: $Blue;
+  border: 0px;
+  color: $Background;
+  &:enabled:hover {
+    background-color: $Background;
+    color: $White;
+    border: 0px;
+
+  }
 }
 
 
@@ -45,14 +80,28 @@ html {
 
 /* SIDE BAR*/
 .p-sidebar .p-sidebar-header {
-  background-color: #79D7CE;
+  background-color: $Background;
+  color: $Foreground;
 
 }
 .p-sidebar-content {
-  background-color: #79D7CE;
+  background-color: $Background;
+  color: $Foreground;
 }
 /* Mobile */
 
+/*Artcile Page */
+.p-badge {
+  background-color: $Cyan;
+}
+
+/* HLJS */
+.hljs{
+  border-radius: 5px;
+  border-style: solid;
+  border-color: $LineNumber;
+  border-width: 2px;
+}
 
 
 @media screen and (max-width: 576px) {
@@ -60,7 +109,7 @@ html {
     display: none;
   }
   html {
-    background-color: #120e24;
+    background-color: $Background;
   }
 }
 
